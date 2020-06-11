@@ -1,0 +1,62 @@
+.order-container{
+    height: calc(100vh - 116px);
+    font-family: 'Poiret One', cursive;
+}
+
+.dark-order-container{
+    color: white;
+}
+
+.highlights{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    flex-wrap: wrap;
+
+    div{
+        padding: 20px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        background-color: #4f8fc7;
+        margin: 5px;
+    }
+}
+
+.title{
+    font-size: 60px;
+    margin: 29px 0;
+    margin-bottom: 12px;
+}
+
+.location-container{
+    margin: 20px 0;
+}
+
+.location{
+    font-size: 33px;
+    margin: 10px 0;
+}
+
+.address-container{
+    margin: 20px 0;
+}
+
+.address{
+    font-size: 33px;
+    margin: 10px 0;
+}
+
+.timings-container{
+    margin: 20px 0;
+}
+
+.timings{
+    font-size: 33px;
+    margin: 10px 0;
+}
+
+.res_image{
+    border-radius: 18px;
+    border: 2px solid black;
+    margin-top: 20px;
+}

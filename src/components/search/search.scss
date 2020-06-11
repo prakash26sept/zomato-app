@@ -1,0 +1,352 @@
+.search{
+    // background-image: url('/book.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0;
+    color: rgb(110, 45, 45);
+    font-family: 'Poiret One', cursive;
+    // padding-bottom: 425px;
+    position: absolute;
+    width: 98vw;
+    height: calc(100vh - 156px);
+    
+}
+
+
+.titlee{
+    font-size: 23px;
+    margin: 25px 0;
+}
+
+.search-input-div{
+    padding-top: 40px;
+    width: 40%;
+    margin: auto;
+    
+
+    .search-input{
+        width: 100%;
+        background-color: transparent;
+        color: rgb(110, 45, 45);
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-size: 28px;
+        border-bottom: 1px solid rgb(110, 45, 45);
+        font-family: 'Poiret One', cursive;
+    }
+
+    padding-bottom: 80px;
+}
+
+::placeholder{
+    color: rgb(110, 45, 45);
+    font-family: 'Poiret One', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.search-button{
+    background-color:#da4141;
+    width: 15%;
+    min-width: 150px;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+    font-size: 24px;
+    margin: auto;
+    margin-bottom: 150px;
+    
+    &:hover{
+        cursor: pointer;
+        background-color: #ec5f5f;
+    }
+}
+
+.show-meaning{
+    width: 100%;
+    margin-top: 60px;
+}
+
+table{
+    margin-top: 60px;
+    width: 65%;
+    color: #ffdddd;
+    margin: auto;
+    background-color: #ab3434a6;
+    line-height: 30px;
+    border-radius: 11px;
+    margin-bottom: 20px;
+
+    th,tr{
+        padding: 10px;
+        background-color: #ff000040;
+        width: 17%;
+    }
+
+    td{
+        font-weight: bold;
+    }
+
+    th{
+        font-size: 21px;
+    }
+}
+
+.search-history{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    font-size: 23px;
+    padding: 10px;
+    border: 1px solid #6e2d2da6;
+    width: fit-content;
+    border-radius: 5px;
+    margin: auto;
+    // color: #1b0808a6;
+}
+
+.choose-location-button{
+    background-color: #ff4e4e;
+    width: fit-content;
+    min-width: 150px;
+    padding: 10px;
+    color: white;
+    border-radius: 7px;
+    margin: auto;
+    font-weight: bolder;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.location-box{
+
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin: auto;
+
+    .place-input{
+        width: fit-content;
+        background-color: transparent;
+        color: #6e2d2d;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-size: 28px;
+        border-bottom: 1px solid #6e2d2d;
+        font-family: 'Poiret One', cursive;
+    }
+}
+
+.location-type{
+    font-size: 28px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #6e2d2d;
+    padding: 9px;
+    font-family: 'Poiret One', cursive;
+    color: #6e2d2d;
+    outline: none;
+}
+
+.dine-image-box{
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    height: 612px;
+    margin-top: 30px;
+}
+.dine-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+
+.order-now{
+    background-color: white;
+    color: #4e0606fa;
+    margin: 7px;
+    border-radius: 50px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: rgb(228, 228, 228);
+    }
+}
+
+//Filter
+
+
+
+.categories-filter-select{
+    width: 42%;
+}
+
+.select-cuisines{
+    // width: 50%;
+
+}
+
+.cuisine-filter-check{
+    display: flex;
+    line-height: 2;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #d05b61;
+    border-radius: 14px;
+    font-size: 19px;
+    width: 26%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.filter-box{
+    display: flex;
+    width: 66%;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 33px;
+    cursor: pointer;
+}
+
+.filter-select{
+    font-size: 28px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #6e2d2d;
+    padding: 9px;
+    font-family: 'Poiret One', cursive;
+    color: #6e2d2d;
+    outline: none;
+    width: 90%;
+}
+
+.toggle-select{
+    display: flex;
+    background-color: #d05c62;
+    font-size: 28px;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    width: 93%;
+    border-radius: 10px;
+}
+
+.select-box-filtration{
+    width: 42%;
+    cursor: pointer;
+}
+
+.filter-button{
+    background-color: #9c1b20;
+    width: 15%;
+    padding: 2px 0;
+    color: white;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+.check-cuisine{
+    width: 16px;
+    height: 16px;
+}
+
+.cuisine-box{
+    flex-basis: 33%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//Pagination
+
+.change-page-box{
+    display: flex;
+    width: 17%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.change-button{
+    background-color: #d7494f;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.loading-image{
+    width: 50%;
+    height: 300px;
+}
+
+// Dark Theme Design
+
+    .dark-search-container{
+        background-color: black;
+    }
+
+    .dark-input::placeholder{
+        color: white;
+        font-family: 'Poiret One', cursive;
+    }
+
+    .dark-input{
+        color: white !important;
+        border-bottom: 1px solid white !important;
+    }
+
+    .dark-select-input{
+        color: white !important;
+        border-bottom: 1px solid white !important;
+        outline: none;
+
+        option{
+            background-color: rgb(49, 48, 48);
+        }
+    }
+
+    .dark-text{
+        color: #ffcdcd !important;
+    }
+
+    .dark-filter-select{
+        color: white !important;
+        border-bottom: 1px solid white !important;
+        outline: none;
+
+        option{
+            background-color: rgb(49, 48, 48);
+        }
+    }
+
+    .dark-search{
+        color: white !important;
+        height: calc(100vh - 156px);
+        position: relative !important;
+        width: 99.2vw;
+    }
+
+    .dark-order-now{
+        background-color: rgb(49, 48, 48) !important;
+        color: white !important;
+    }
+
+    .dark-cuisine-filter-check{
+        background-color: rgb(49, 48, 48);
+    }
+
+    .dark-background{
+        background-color: black;
+    }
+
+
+// Dark Theme Design Ends

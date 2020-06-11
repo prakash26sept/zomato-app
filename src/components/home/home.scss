@@ -1,0 +1,83 @@
+.home{
+    // background-image: url('/book.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // padding: 190px 0;
+    color: #e23744;
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url('/thomas-tucker-MNtag_eXMKw-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    border-radius: 10px;
+    position: relative;
+    height: 40vh;
+}
+
+.home-left{
+    width: 0%;
+    display: flex;
+
+}
+
+.home-right{
+    width: 48%;
+    font-family: 'Poiret One', cursive;
+}
+
+.title{
+    font-size: 50px;
+    margin-bottom: 37px;
+    font-weight: bolder;
+    color: #d4d4d4;
+}
+
+.details{
+    
+    font-size: 15px;
+    text-align: center;
+    color: #c7c7c7;
+    line-height: 25px;
+}
+
+.info-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/brooke-lark-08bOYnH_r_E-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 40px 20px;
+    border-radius: 48px;
+    border: 1px solid black;
+    /* background-position: center;*/
+}
+
+.bike{
+    width: 23%;
+    height: 51%;
+    top: 52%;
+    left: 0%;
+    position: absolute;
+}
+
+//Dark
+
+.dark-home-container{
+    // height: calc(100vh - 156px);
+    position: relative !important;
+}
+
+.home-container{
+    position: absolute;
+    width: 98vw;
+    height: calc(100vh - 156px);
+}
+
+//Dark ends

@@ -1,0 +1,44 @@
+.header{
+    display: flex;
+    padding: 6px 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #141414;
+    border-bottom: 3px solid #2c2c2c;
+}
+
+.logo{
+    font-size: 23px;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+
+    &:hover{
+        color: rgb(133, 133, 133);
+    }
+}
+
+.right-nav{
+    display: flex;
+
+    div{
+        margin-left: 20px;
+        font-size: 23px; 
+        color: white;
+        font-family: 'Poiret One', cursive;
+        cursor: pointer;
+
+        &:hover{
+            color: rgb(133, 133, 133);
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
