@@ -1,7 +1,9 @@
 const initialState = {
     words: [],
     restaurant_id: 0,
-    darkTheme: false
+    darkTheme: false,
+    fontSize: "small",
+    selectedLanguage: "en"
 };
 
 function rootReducer(state = initialState, action: any) {
@@ -36,6 +38,28 @@ function rootReducer(state = initialState, action: any) {
         return {
             ...state,
             darkTheme: action.payload
+        }
+    }
+
+    if (action.type === "CHANGE_FONT_SIZE") {
+
+        console.log("Font size changed");
+        console.log(action.payload);
+
+        return {
+            ...state,
+            fontSize: action.payload
+        }
+    }
+
+    if (action.type === "CHANGE_LANGUAGE") {
+
+        console.log("language changed");
+        console.log(action.payload);
+
+        return {
+            ...state,
+            selectedLanguage: action.payload
         }
     }
 

@@ -14,7 +14,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    width: 20%;
+    width: 30%;
     justify-content: space-between;
 
     &:hover{
@@ -24,6 +24,7 @@
 
 .right-nav{
     display: flex;
+    align-items: center;
 
     div{
         margin-left: 20px;
@@ -42,3 +43,40 @@ a{
     text-decoration: none;
     color: white;
 }
+
+.language-selector{
+    font-size: 21px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    outline: none;
+
+
+    option{
+        background-color: rgb(34, 34, 34);
+    }
+}
+
+//Text sizer
+
+.text-sizer{
+    color: white;
+    display: flex;
+
+    span{
+        padding: 0 5px;
+
+        img{
+            padding: 2px;
+        }
+
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+
+}
+
+//Text sizer ends

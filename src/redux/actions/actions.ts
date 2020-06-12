@@ -14,4 +14,13 @@ export function switchToDark(payload: any) {
     return { type: "SWITCH_TO_DARK", payload }
 }
 
+export function changeFontSize(payload: any) {
+    return { type: "CHANGE_FONT_SIZE", payload }
+}
+
+export function changeLanguage(payload: any) {
+    return { type: "CHANGE_LANGUAGE", payload }
+}
+
+
 // export default add;

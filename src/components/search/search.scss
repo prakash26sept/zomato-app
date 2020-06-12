@@ -12,9 +12,12 @@
     
 }
 
+// titlee , search-input, search-button, search-history, place-input, location-type, filter-select, toggle-select,
+// filter-button
+
 
 .titlee{
-    font-size: 23px;
+    // font-size: 25px;
     margin: 25px 0;
 }
 
@@ -22,21 +25,19 @@
     padding-top: 40px;
     width: 40%;
     margin: auto;
-    
-
-    .search-input{
-        width: 100%;
-        background-color: transparent;
-        color: rgb(110, 45, 45);
-        outline: none;
-        border: none;
-        padding: 10px;
-        font-size: 28px;
-        border-bottom: 1px solid rgb(110, 45, 45);
-        font-family: 'Poiret One', cursive;
-    }
-
     padding-bottom: 80px;
+}
+
+.search-input{
+    width: 100%;
+    background-color: transparent;
+    color: rgb(110, 45, 45);
+    outline: none;
+    border: none;
+    padding: 10px;
+    // font-size: 25px;
+    border-bottom: 1px solid rgb(110, 45, 45);
+    font-family: 'Poiret One', cursive;
 }
 
 ::placeholder{
@@ -56,7 +57,7 @@ a{
     padding: 10px;
     color: white;
     border-radius: 7px;
-    font-size: 24px;
+    // font-size: 25px;
     margin: auto;
     margin-bottom: 150px;
     
@@ -71,7 +72,7 @@ a{
     margin-top: 60px;
 }
 
-table{
+.search-table{
     margin-top: 60px;
     width: 65%;
     color: #ffdddd;
@@ -89,24 +90,29 @@ table{
 
     td{
         font-weight: bold;
+        // font-size: 16px;
     }
 
-    th{
-        font-size: 21px;
-    }
+    // th{
+    //      font-size: 21px;
+    // }
 }
 
 .search-history{
     display: flex;
     flex-direction: column;
     line-height: 30px;
-    font-size: 23px;
+    // font-size: 25px;
     padding: 10px;
     border: 1px solid #6e2d2da6;
     width: fit-content;
     border-radius: 5px;
     margin: auto;
     // color: #1b0808a6;
+}
+
+.search-history-box{
+    padding: 10px 0;
 }
 
 .choose-location-button{
@@ -129,21 +135,23 @@ table{
     justify-content: space-between;
     margin: auto;
 
-    .place-input{
-        width: fit-content;
-        background-color: transparent;
-        color: #6e2d2d;
-        outline: none;
-        border: none;
-        padding: 10px;
-        font-size: 28px;
-        border-bottom: 1px solid #6e2d2d;
-        font-family: 'Poiret One', cursive;
-    }
+    
+}
+
+.place-input{
+    width: fit-content;
+    background-color: transparent;
+    color: #6e2d2d;
+    outline: none;
+    border: none;
+    padding: 10px;
+    // font-size: 25px;
+    border-bottom: 1px solid #6e2d2d;
+    font-family: 'Poiret One', cursive;
 }
 
 .location-type{
-    font-size: 28px;
+    // font-size: 25px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #6e2d2d;
@@ -215,7 +223,7 @@ table{
 }
 
 .filter-select{
-    font-size: 28px;
+    // font-size: 25px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #6e2d2d;
@@ -229,7 +237,7 @@ table{
 .toggle-select{
     display: flex;
     background-color: #d05c62;
-    font-size: 28px;
+    // font-size: 25px;
     color: white;
     padding: 10px;
     justify-content: space-between;
@@ -247,7 +255,7 @@ table{
     width: 15%;
     padding: 2px 0;
     color: white;
-    font-size: 28px;
+    // font-size: 25px;
     border-radius: 10px;
 }
 
@@ -350,3 +358,49 @@ table{
 
 
 // Dark Theme Design Ends
+
+
+
+//Font Size changer
+
+    .small-search{
+        font-size: 25px;
+    }
+
+    .medium-search{
+        font-size: 28px;
+    }
+
+    .large-search{
+        font-size: 31px;
+    }
+
+
+    .small-table{
+        td{
+            font-size: 16px;
+        }
+        th{
+            font-size: 21px;
+        }
+    }
+
+    .medium-table{
+        td{
+            font-size: 18px;
+        }
+        th{
+            font-size: 23px;
+        }
+    }
+
+    .large-table{
+        td{
+            font-size: 25px;
+        }
+        th{
+            font-size: 21px;
+        }
+    }
+
+//Font Size Changer Ends

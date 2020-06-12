@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 
 import { connect } from "react-redux";
 import { switchToDark } from '../../redux/actions/actions';
+import { withTranslation, Trans } from 'react-i18next';
 
 
 
@@ -76,6 +77,7 @@ const IOSSwitch = withStyles((theme: Theme) =>
 });
 
 function CustomizedSwitches(props: any) {
+    const { t } = props;
     const [state, setState] = React.useState({
         checkedB: false,
     });
@@ -97,7 +99,7 @@ function CustomizedSwitches(props: any) {
 
             <FormControlLabel
                 control={<IOSSwitch checked={props.darkTheme} onChange={handleChange} name="checkedB" />}
-                label={props.darkTheme ? "Switch to Light" : "Switch to Dark"}
+                label={props.darkTheme ? `${t('switchToLight')}` : `${t('switchToDark')}`}
             />
 
         </FormGroup>
@@ -117,4 +119,4 @@ function mapDispatchToProps(dispatch: any) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CustomizedSwitches);
+export default (withTranslation()(connect(mapStateToProps, mapDispatchToProps)(CustomizedSwitches)));

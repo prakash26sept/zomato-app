@@ -2,12 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import { connect } from "react-redux";
+import { withTranslation, Trans } from 'react-i18next';
 import { addWord } from '../../redux/actions/actions';
 import { addRestaurantCode } from '../../redux/actions/actions';
 import './search.scss';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
 
 const pageVariant = {
 
@@ -50,6 +52,8 @@ interface Props {
     addWord: any;
     addRestaurantCode: any;
     darkTheme: any;
+    fontSize: any;
+    t: any;
 }
 
 interface State {
@@ -275,6 +279,9 @@ class Search extends React.Component<Props, State> {
         console.log("added to the state restaurant id " + e.target.id);
     }
 
+    // titlee , search-input, search-button, search-history, place-input, location-type, filter-select, toggle-select,
+    // filter-button
+
 
     showMeanings = () => {
 
@@ -288,7 +295,7 @@ class Search extends React.Component<Props, State> {
 
                         <div className="filter-box">
                             <div className="categories-filter-select">
-                                <select className={`filter-select ${this.props.darkTheme ? "dark-filter-select" : ""}`}>
+                                <select className={`filter-select ${this.props.darkTheme ? "dark-filter-select" : ""} ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`}>
                                     {this.state.foodCategories.map(val => {
                                         return <option>{val.categories.name}</option>
                                     })}
@@ -298,7 +305,7 @@ class Search extends React.Component<Props, State> {
                             <div className="select-box-filtration">
 
                                 <div className="select-cuisines" onClick={this.selectCuisines}>
-                                    <div className="toggle-select"><div>Select Cuisines</div>
+                                    <div className={`toggle-select ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`}><div>Select Cuisines</div>
                                         <div><img src="download.png" alt="expand" /></div>
                                     </div>
                                 </div>
@@ -314,14 +321,14 @@ class Search extends React.Component<Props, State> {
 
                             </div>
 
-                            <div className="filter-button">
+                            <div className={`filter-button ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`}>
                                 Filter Results
                             </div>
 
 
                         </div>
 
-                        <table>
+                        <table className={`search-table ${this.props.fontSize === "small" ? "small-table" : this.props.fontSize === "medium" ? "medium-table" : "large-table"}`}>
                             <tr>
                                 <th>Restaurant</th>
                                 <th>Name</th>
@@ -364,6 +371,9 @@ class Search extends React.Component<Props, State> {
     }
 
     render() {
+
+        const { t } = this.props;
+
         return (
             <motion.div
 
@@ -376,40 +386,38 @@ class Search extends React.Component<Props, State> {
                 
                  `}
             >
-
-                {/* ${this.props.darkTheme ? "dark-search-container" : ""} */}
                 <div className={`search ${this.props.darkTheme ? "dark-search" : ""}`}>
 
-                    <div className={`titlee ${this.props.darkTheme ? "dark-text" : ""}`}>Your search for Food Ends here</div>
+                    <div className={`titlee ${this.props.darkTheme ? "dark-text" : ""} ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`}>{t('searchTitle')}</div>
 
                     <div className="location-box">
 
 
-                        <select className={`location-type ${this.props.darkTheme ? "dark-select-input" : ""}`} onChange={this.changeLocationType} value={this.state.locationType}>
+                        <select className={`location-type ${this.props.darkTheme ? "dark-select-input" : ""} ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`} onChange={this.changeLocationType} value={this.state.locationType}>
                             <option value="">
-                                Choose Location Type
+                                {t('locationType')}
                             </option>
                             <option value="city">
-                                City
+                                {t('city')}
                             </option>
                             <option value="subzone">
-                                Sub Zone
+                                {t('subZone')}
                             </option>
                             <option value="zone">
-                                Zone
+                                {t('zone')}
                             </option>
                             <option value="landmark">
-                                Landmark
+                                {t('landmark')}
                             </option>
                             <option value="metro">
-                                Metro
+                                {t('metro')}
                             </option>
                             <option value="group">
-                                Group
+                                {t('group')}
                             </option>
                         </select>
 
-                        <input className={`place-input ${this.props.darkTheme ? "dark-input" : ""}`} type="text" placeholder="Enter Place" onChange={this.changePlace} value={this.state.place} />
+                        <input className={`place-input ${this.props.darkTheme ? "dark-input" : ""} ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`} type="text" placeholder={t('enterPlace')} onChange={this.changePlace} value={this.state.place} />
 
                     </div>
 
@@ -417,10 +425,10 @@ class Search extends React.Component<Props, State> {
                     {this.state.showFindKeyword ?
                         <div className={this.props.darkTheme ? "dark-background" : ""}>
 
-                            <div className="search-input-div"><input className={`search-input ${this.props.darkTheme ? "dark-input" : ""}`} onChange={this.changeSearch} value={this.state.searchText} type="text" placeholder="Restaurent, Cafe, etc" /></div>
+                            <div className="search-input-div"><input className={`search-input ${this.props.darkTheme ? "dark-input" : ""} ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`} onChange={this.changeSearch} value={this.state.searchText} type="text" placeholder={t('restCafeEtc')} /></div>
 
-                            <div className="search-button" onClick={this.searchWord}>
-                                <strong>FIND</strong>
+                            <div className={`search-button ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`} onClick={this.searchWord}>
+                                <strong>{t('find')}</strong>
                             </div>
 
                             {this.state.loading === "loading" ?
@@ -445,7 +453,7 @@ class Search extends React.Component<Props, State> {
 
 
                             {this.props.words.length !== 0 ? <div className="search-history-box"><div>Search History</div><br />
-                                <div className="search-history">
+                                <div className={`search-history ${this.props.fontSize === "small" ? "small-search" : this.props.fontSize === "medium" ? "medium-search" : "large-search"}`}>
 
                                     {this.props.words.map((val: any) => {
 
@@ -470,7 +478,8 @@ const mapStateToProps = (state: any) => {
     return {
         words: state.words,
         restaurant_id: state.restaurant_id,
-        darkTheme: state.darkTheme
+        darkTheme: state.darkTheme,
+        fontSize: state.fontSize
     };
 };
 
@@ -482,4 +491,4 @@ function mapDispatchToProps(dispatch: any) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default (withTranslation()(connect(mapStateToProps, mapDispatchToProps)(Search)));

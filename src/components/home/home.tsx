@@ -4,16 +4,11 @@ import React from 'react';
 import './home.scss';
 import { motion } from 'framer-motion';
 import { connect } from "react-redux";
+import { withTranslation, Trans } from 'react-i18next';
+
 
 const pageTransition = {
-    // in: {
-    //     opacity: 1,
-    //     y: 0
-    // },
-    // out: {
-    //     opacity: 0,
-    //     y: "-100vh"
-    // }
+
     initial: {
         opacity: 0,
         x: "-100vw",
@@ -63,12 +58,14 @@ const pageTrans = {
 
 interface Props {
     darkTheme: any;
+    fontSize: any;
+    t: any;
 }
 
 class Home extends React.Component<Props> {
 
-
     render() {
+        const { t } = this.props;
 
         return (
             <div className={`home-container ${this.props.darkTheme ? "dark-home-container" : ""}`}>
@@ -82,7 +79,6 @@ class Home extends React.Component<Props> {
                     transition={pageTransition}
                 >
 
-
                     <div className="home-left">
                         <motion.img
                             initial="out"
@@ -95,10 +91,11 @@ class Home extends React.Component<Props> {
                     <div className="home-right">
                         <div className="info-container">
 
-                            <div className="title">Explore Restaurents and their foods<br />Before You Order!</div>
-                            <div className="details">This App helps you to choose your food wisely.</div>
-                            <div className="details">Choose best Restaurents by Ratings</div>
-                            <div className="details">Look into wide Range of food Categories</div>
+                            <div className="title-home">{t('homeTitle')}</div>
+                            <div className={`details ${this.props.fontSize === "small" ? "small-details" : this.props.fontSize === "medium" ? "medium-details" : "large-details"}`}>
+                                <div >{t('homeDetails')}</div>
+                            </div>
+
 
                         </div>
 
@@ -113,10 +110,10 @@ class Home extends React.Component<Props> {
 
 const mapStateToProps = (state: any) => {
     return {
-        darkTheme: state.darkTheme
+        darkTheme: state.darkTheme,
+        fontSize: state.fontSize
     };
 };
-
 
 function mapDispatchToProps(dispatch: any) {
     return {
@@ -124,4 +121,4 @@ function mapDispatchToProps(dispatch: any) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default (withTranslation()(connect(mapStateToProps, mapDispatchToProps)(Home)));
